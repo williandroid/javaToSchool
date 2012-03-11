@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author tassio
+ * @author Tássio Auad
  */
 class Disciplinas {
     private int id;

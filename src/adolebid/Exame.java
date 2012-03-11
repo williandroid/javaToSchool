@@ -6,7 +6,7 @@ package adolebid;
 
 /**
  *
- * @author tassio
+ * @author Tássio Auad
  */
 class Exame {
     
