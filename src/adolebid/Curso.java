@@ -75,7 +75,8 @@ public class Curso {
     /**
      * @param disciplinas the disciplinas to set
      */
-    public void setDisciplinas(ArrayList<Disciplinas> disciplinas) {
-        this.disciplinas = disciplinas;
+    public void registrarDisciplina(Disciplinas disciplina) {
+        
+        this.disciplinas.add(disciplina);
     }
 }
