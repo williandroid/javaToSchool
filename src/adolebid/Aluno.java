@@ -4,6 +4,7 @@
  */
 package adolebid;
 
+import adolebid.Tarefas.Tarefas;
 import java.util.ArrayList;
 /**
  *
@@ -17,8 +18,8 @@ public class Aluno {
     private String endereco;
     private ArrayList<Presencas> presencas = new ArrayList<Presencas>();
     private ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
-    private ArrayList<Exame> exames = new ArrayList<Exame>();
-    private ArrayList<Trabalho> trabalhos = new ArrayList<Trabalho>();
+    private ArrayList<Tarefas> exames = new ArrayList<Tarefas>();
+    private ArrayList<Tarefas> trabalhos = new ArrayList<Tarefas>();
     
     public Aluno(int id, String nomeCompleto, String email, String telefone, String endereco)
     {
@@ -131,29 +132,34 @@ public class Aluno {
     /**
      * @return the exames
      */
-    public ArrayList<Exame> getExames() {
+    public ArrayList<Tarefas> getExames() {
         return exames;
     }
 
     /**
      * @param exames the exames to set
      */
-    public void setExames(ArrayList<Exame> exames) {
+    public void setExames(ArrayList<Tarefas> exames) {
         this.exames = exames;
     }
 
     /**
      * @return the trabalhos
      */
-    public ArrayList<Trabalho> getTrabalhos() {
+    public ArrayList<Tarefas> getTrabalhos() {
         return trabalhos;
     }
 
     /**
      * @param trabalhos the trabalhos to set
      */
-    public void setTrabalhos(ArrayList<Trabalho> trabalhos) {
+    public void setTrabalhos(ArrayList<Tarefas> trabalhos) {
         this.trabalhos = trabalhos;
+    }
+    
+    public void gerarHistorico()
+    {
+        
     }
     
 }

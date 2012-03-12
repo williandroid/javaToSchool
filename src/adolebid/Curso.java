@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author Tássio Auad
  */
-class Curso {
+public class Curso {
     private int id;
     private String nome;
     private String descricao;

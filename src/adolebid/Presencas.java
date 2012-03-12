@@ -8,7 +8,7 @@ package adolebid;
  *
  * @author Tássio Auad
  */
-class Presencas {
+public class Presencas {
  
         private String data;
         private boolean status;

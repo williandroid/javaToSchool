@@ -4,20 +4,21 @@
  */
 package adolebid;
 
+import adolebid.Tarefas.Tarefas;
 import java.util.ArrayList;
 
 /**
  *
  * @author Tássio Auad
  */
-class Disciplinas {
+public class Disciplinas {
     private int id;
     private String nome;
     private String descricao;
     private Curso curso;
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
-    private ArrayList<Exame> exames = new ArrayList<Exame>();
-    private ArrayList<Trabalho> trabalhos = new ArrayList<Trabalho>();
+    private ArrayList<Tarefas> exames = new ArrayList<Tarefas>();
+    private ArrayList<Tarefas> trabalhos = new ArrayList<Tarefas>();
 
     public Disciplinas(int id, String nome, String descricao, Curso curso)
     {
@@ -100,28 +101,28 @@ class Disciplinas {
     /**
      * @return the exames
      */
-    public ArrayList<Exame> getExames() {
+    public ArrayList<Tarefas> getExames() {
         return exames;
     }
 
     /**
      * @param exames the exames to set
      */
-    public void setExames(ArrayList<Exame> exames) {
+    public void setExames(ArrayList<Tarefas> exames) {
         this.exames = exames;
     }
 
     /**
      * @return the trabalhos
      */
-    public ArrayList<Trabalho> getTrabalhos() {
+    public ArrayList<Tarefas> getTrabalhos() {
         return trabalhos;
     }
 
     /**
      * @param trabalhos the trabalhos to set
      */
-    public void setTrabalhos(ArrayList<Trabalho> trabalhos) {
+    public void setTrabalhos(ArrayList<Tarefas> trabalhos) {
         this.trabalhos = trabalhos;
     }
     
