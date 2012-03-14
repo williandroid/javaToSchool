@@ -19,7 +19,7 @@ public class AdolEBiD {
     public int idAluno = 000;
     public Scanner scan = new Scanner(System.in);
     public ArrayList<Curso> cursos = new ArrayList<Curso>();
-    
+//Tássio    
     public static void main(String[] args) {
        
         
@@ -75,8 +75,5 @@ public class AdolEBiD {
         num = scan.nextInt();
         Disciplinas disciplina = new Disciplinas();
         disciplina = cursos.get(num/10).getDisciplinas().get(num%10);
-        
-              
-        
     }
 }
