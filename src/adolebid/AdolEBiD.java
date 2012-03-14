@@ -4,6 +4,7 @@
  */
 package adolebid;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -17,6 +18,7 @@ public class AdolEBiD {
      */
     int idAluno = 000;
     Scanner scan = new Scanner(System.in);
+    ArrayList cursos = new ArrayList();
     
     public static void main(String[] args) {
        
@@ -40,6 +42,7 @@ public class AdolEBiD {
     public void cadastrarAluno()
     {
         int i, j;
+        int num;
         String nomeCompleto;
         String email;
         String telefone;
@@ -54,11 +57,25 @@ public class AdolEBiD {
         System.out.println("Entre com o endereco do aluno:");
         nomeCompleto = scan.nextLine();
         Aluno a = new Aluno(idAluno, nomeCompleto, email, telefone, endereco);
-        
+        System.out.println("-------------------------------------------------");
         System.out.println("Voce deseja matricular esse aluno em qual disciplina?");
-
-                
-                    
+        for(i = 0; i < cursos.size(); i++)
+        {
+            ArrayList<Disciplinas> disciplina = new ArrayList<Disciplinas>();
+            
+            disciplina = cursos.get(i).getDisciplinas();
+            
+            for(j = 0; j < disciplina.size(); j++)
+            {
+                System.out.println("["+i+j+"] - "+ disciplina.get(j).getNome());
+            }
+           
+        }
+               
+        num = scan.nextInt();
+        Disciplinas disciplina = new Disciplinas();
+        disciplina = cursos.get(num/10).getDisciplinas().get(num%10);
+        
               
         
     }

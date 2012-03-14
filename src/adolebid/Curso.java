@@ -79,4 +79,9 @@ public class Curso {
         
         this.disciplinas.add(disciplina);
     }
+    
+    public Disciplinas disciplinaDeId(int id)
+    {
+        return this.disciplinas.get(id);
+    }
 }

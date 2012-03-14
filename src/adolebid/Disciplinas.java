@@ -27,6 +27,10 @@ public class Disciplinas {
         this.descricao = descricao;
         this.curso = curso;
     }
+
+    Disciplinas() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
     
     /**
      * @return the id
