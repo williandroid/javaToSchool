@@ -16,9 +16,9 @@ public class AdolEBiD {
     /**
      * @param args the command line arguments
      */
-    int idAluno = 000;
-    Scanner scan = new Scanner(System.in);
-    ArrayList cursos = new ArrayList();
+    public int idAluno = 000;
+    public Scanner scan = new Scanner(System.in);
+    public ArrayList<Curso> cursos = new ArrayList<Curso>();
     
     public static void main(String[] args) {
        
@@ -51,23 +51,23 @@ public class AdolEBiD {
         System.out.println("Entre com o nome completo do aluno:");
         nomeCompleto = scan.nextLine();
         System.out.println("Entre com o email do aluno:");
-        nomeCompleto = scan.nextLine();
+        email = scan.nextLine();
         System.out.println("Entre com o telefone do aluno:");
-        nomeCompleto = scan.nextLine();
+        telefone = scan.nextLine();
         System.out.println("Entre com o endereco do aluno:");
-        nomeCompleto = scan.nextLine();
+        endereco = scan.nextLine();
         Aluno a = new Aluno(idAluno, nomeCompleto, email, telefone, endereco);
         System.out.println("-------------------------------------------------");
         System.out.println("Voce deseja matricular esse aluno em qual disciplina?");
         for(i = 0; i < cursos.size(); i++)
         {
-            ArrayList<Disciplinas> disciplina = new ArrayList<Disciplinas>();
+            Curso auxCurso = new Curso();
             
-            disciplina = cursos.get(i).getDisciplinas();
+            auxCurso = cursos.get(i);
             
-            for(j = 0; j < disciplina.size(); j++)
+            for(j = 0; j < auxCurso.getDisciplinas().size(); j++)
             {
-                System.out.println("["+i+j+"] - "+ disciplina.get(j).getNome());
+                System.out.println("["+i+j+"] - "+ auxCurso.disciplinaDeId(j).getNome());
             }
            
         }

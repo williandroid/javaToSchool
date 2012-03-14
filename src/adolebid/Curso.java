@@ -22,6 +22,10 @@ public class Curso {
         this.nome = nome;
         this.descricao = descricao;
     }
+
+    Curso() {
+        throw new UnsupportedOperationException("Not yet implemented");
+    }
     
     /**
      * @return the id
