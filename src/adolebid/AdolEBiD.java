@@ -16,7 +16,6 @@ public class AdolEBiD {
     /**
      * @param args the command line arguments
      */
-    public int idAluno = 000;
     public Scanner scan = new Scanner(System.in);
     public ArrayList<Curso> cursos = new ArrayList<Curso>();
 //Tássio    
@@ -43,22 +42,10 @@ public class AdolEBiD {
     {
         int i, j;
         int num;
-        String nomeCompleto;
-        String email;
-        String telefone;
-        String endereco;
-        
-        System.out.println("Entre com o nome completo do aluno:");
-        nomeCompleto = scan.nextLine();
-        System.out.println("Entre com o email do aluno:");
-        email = scan.nextLine();
-        System.out.println("Entre com o telefone do aluno:");
-        telefone = scan.nextLine();
-        System.out.println("Entre com o endereco do aluno:");
-        endereco = scan.nextLine();
-        Aluno aluno = new Aluno(idAluno, nomeCompleto, email, telefone, endereco);
+        Aluno aluno = new Aluno();
         System.out.println("-------------------------------------------------");
         System.out.println("Voce deseja matricular esse aluno em qual disciplina?");
+        
         for(i = 0; i < cursos.size(); i++)
         {
             Curso auxCurso = new Curso();

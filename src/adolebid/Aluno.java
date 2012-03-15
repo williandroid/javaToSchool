@@ -6,6 +6,7 @@ package adolebid;
 
 import adolebid.Tarefas.Tarefas;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  *
  * @author Tassio Auad
@@ -20,14 +21,24 @@ public class Aluno {
     private ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
     private ArrayList<Tarefas> exames = new ArrayList<Tarefas>();
     private ArrayList<Tarefas> trabalhos = new ArrayList<Tarefas>();
+    public int idAluno = 000;
     
-    public Aluno(int id, String nomeCompleto, String email, String telefone, String endereco)
+    Scanner scan = new Scanner(System.in);
+    
+    public Aluno()
     {
-        this.id = id;
-        this.nomeCompleto = nomeCompleto;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
+        String nomeCompleto;
+        String email;
+        String telefone;
+        String endereco;
+        System.out.println("Entre com o nome completo do aluno:");
+        nomeCompleto = scan.nextLine();
+        System.out.println("Entre com o email do aluno:");
+        email = scan.nextLine();
+        System.out.println("Entre com o telefone do aluno:");
+        telefone = scan.nextLine();
+        System.out.println("Entre com o endereco do aluno:");
+        endereco = scan.nextLine();
     }
     
     
