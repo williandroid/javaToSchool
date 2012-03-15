@@ -24,11 +24,14 @@ public class AdolEBiD {
     public static void main(String[] args) {
         int escolha;
         escolha = scan.nextInt();
-        while(true)
+        boolean flag = true;
+        while(flag)
         {
+            System.out.print(clear); 
             System.out.println("[1] - Cadastrar novo curso");
             System.out.println("[2] - Cadastrar nova disciplina");
             System.out.println("[3] - Cadastrar novo aluno");
+            System.out.println("[4] - Sair");
             switch(escolha)
             {
                 case 1:
@@ -41,6 +44,9 @@ public class AdolEBiD {
                 case 3:
                     System.out.print(clear);  
                     cadastrarAluno();
+                    break;
+                case 4:
+                    flag = false;
                     break;
             }
         }
