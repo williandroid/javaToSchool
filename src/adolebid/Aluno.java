@@ -27,10 +27,7 @@ public class Aluno {
     
     public Aluno()
     {
-        String nomeCompleto;
-        String email;
-        String telefone;
-        String endereco;
+
         System.out.println("Entre com o nome completo do aluno:");
         nomeCompleto = scan.nextLine();
         System.out.println("Entre com o email do aluno:");

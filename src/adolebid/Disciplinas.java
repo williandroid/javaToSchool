@@ -6,6 +6,7 @@ package adolebid;
 
 import adolebid.Tarefas.Tarefas;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -20,16 +21,18 @@ public class Disciplinas {
     private ArrayList<Tarefas> exames = new ArrayList<Tarefas>();
     private ArrayList<Tarefas> trabalhos = new ArrayList<Tarefas>();
 
-    public Disciplinas(int id, String nome, String descricao, Curso curso)
+    Scanner scan = new Scanner(System.in);
+    
+    public Disciplinas(Curso curso)
     {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
+        
+        System.out.println("Entre com o nome completo do aluno:");
+        nome = scan.nextLine();
+        System.out.println("Entre com o email do aluno:");
+        descricao = scan.nextLine();
+        System.out.println("Entre com o telefone do aluno:");
+        id = scan.nextInt();
         this.curso = curso;
-    }
-
-    Disciplinas() {
-        throw new UnsupportedOperationException("Not yet implemented");
     }
     
     /**
