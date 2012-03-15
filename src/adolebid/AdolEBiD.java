@@ -35,6 +35,9 @@ public class AdolEBiD {
                     System.out.print(clear);  
                     cadastrarCurso();
                     break;
+                case 2:
+                    System.out.print(clear);
+                    cadastrarDisciplina();
                 case 3:
                     System.out.print(clear);  
                     cadastrarAluno();
@@ -110,5 +113,19 @@ public class AdolEBiD {
     {
         Curso curso = new Curso();
         cursos.add(curso);
+    }
+    
+    public static void cadastrarDisciplina()
+    {
+        int i;
+        System.out.println("Em qual curso voce deseja cadastrar uma disciplina?");
+        for(i = 0; i < cursos.size(); i++)
+        {
+            System.out.println("["+i+"] - Curso: "+ cursos.get(i).getNome());
+        }
+        System.out.println("Opcao escolhida:");
+        int opcDisc = scan.nextInt();
+        System.out.print(clear); 
+        Disciplinas disciplina = new Disciplinas(cursos.get(opcDisc));
     }
 }

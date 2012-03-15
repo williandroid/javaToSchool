@@ -105,8 +105,8 @@ public class Curso {
             for(j = 0; j < getDisciplinas().size(); j++)
             {
                 System.out.println("["+j+"] - "+ disciplinaDeId(j).getNome());
-            }
-           
-        
+            }  
     }
+    
+
 }
