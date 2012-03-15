@@ -132,6 +132,12 @@ public class Disciplinas {
     public void setTrabalhos(ArrayList<Tarefas> trabalhos) {
         this.trabalhos = trabalhos;
     }
-    
-    
+ 
+    public void exibirDisciplina() {
+       System.out.println(getId());
+       System.out.println(getNome());
+       System.out.println(getDescricao());
+       System.out.println(getCurso());
+    }
+   
 }

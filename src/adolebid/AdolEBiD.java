@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author tassio
+ * @author Tássio Auad
  */
 public class AdolEBiD {
 
@@ -17,6 +17,9 @@ public class AdolEBiD {
      * @param args the command line arguments
      */
     static public ArrayList<Curso> cursos = new ArrayList<Curso>();
+    static public ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+    static public ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
+    
     static Scanner scan = new Scanner(System.in);
     static char esc = 27;  
     static String clear = esc + "[2J"; //codigo ansi para limpar a tela  
@@ -31,7 +34,10 @@ public class AdolEBiD {
             System.out.println("[1] - Cadastrar novo curso");
             System.out.println("[2] - Cadastrar nova disciplina");
             System.out.println("[3] - Cadastrar novo aluno");
-            System.out.println("[4] - Sair");
+            System.out.println("[4] - Relatorio de Alunos");
+            System.out.println("[5] - Relatorio de Cursos");
+            System.out.println("[6] - Relatorio de Disciplinas");
+            System.out.println("[7] - Sair");
             switch(escolha)
             {
                 case 1:
@@ -46,6 +52,18 @@ public class AdolEBiD {
                     cadastrarAluno();
                     break;
                 case 4:
+                    System.out.print(clear);  
+                    relatorioAlunos();
+                    break;
+                case 5:
+                    System.out.print(clear);  
+                    relatorioCursos();
+                    break;
+                case 6:
+                    System.out.print(clear);  
+                    relatorioDisciplinas();
+                    break;
+                case 7:
                     flag = false;
                     break;
             }
@@ -58,6 +76,7 @@ public class AdolEBiD {
         int esc1;
         int opcDisc;
         Aluno aluno = new Aluno();
+        alunos.add(aluno);
         System.out.println("Aluno Cadastrado com Sucesso.");
         System.out.print(clear); 
         System.out.println("Deseja matricular esse aluno em algum curso?\n[0]-Sim\n[1]-Não\n\n");
@@ -133,5 +152,36 @@ public class AdolEBiD {
         int opcDisc = scan.nextInt();
         System.out.print(clear); 
         Disciplinas disciplina = new Disciplinas(cursos.get(opcDisc));
+        disciplinas.add(disciplina);
+    }
+    
+    public static void relatorioAlunos()
+    {
+        int i;
+        for(i = 0; i < alunos.size(); i++)
+        {
+            alunos.get(i).exibirAluno();
+            System.out.println("----------------------");
+        } 
+    }
+    
+    public static void relatorioCursos()
+    {
+        int i;
+        for(i = 0; i < cursos.size(); i++)
+        {
+            cursos.get(i).exibirCurso();
+            System.out.println("----------------------");
+        } 
+    }
+    
+    public static void relatorioDisciplinas()
+    {
+        int i;
+        for(i = 0; i < disciplinas.size(); i++)
+        {
+            disciplinas.get(i).exibirDisciplina();
+            System.out.println("----------------------");
+        } 
     }
 }

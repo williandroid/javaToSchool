@@ -109,4 +109,10 @@ public class Curso {
     }
     
 
+    public void exibirCurso() {
+       System.out.println(getId());
+       System.out.println(getNome());
+       System.out.println(getDescricao());
+       System.out.println(getDisciplinas());
+    }
 }

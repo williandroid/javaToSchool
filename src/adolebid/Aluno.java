@@ -181,5 +181,13 @@ public class Aluno {
         this.curso = curso;
     }
 
+   public void exibirAluno()
+   {
+       System.out.println(getId());
+       System.out.println(getNomeCompleto());
+       System.out.println(getEmail());
+       System.out.println(getTelefone());
+       System.out.println(getCurso());
+   }
     
 }
