@@ -23,9 +23,6 @@ public class Curso {
         this.descricao = descricao;
     }
 
-    Curso() {
-        throw new UnsupportedOperationException("Not yet implemented");
-    }
     
     /**
      * @return the id
@@ -75,6 +72,11 @@ public class Curso {
     public ArrayList<Disciplinas> getDisciplinas() {
         return disciplinasArray;
     }
+    
+    public void setDisciplinas(ArrayList<Disciplinas> disciplinasArray) {
+        this.disciplinasArray = disciplinasArray;
+    }
+
 
     /**
      * @param disciplinas the disciplinas to set
