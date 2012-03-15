@@ -61,48 +61,48 @@ public class AdolEBiD {
             }
             System.out.println("Opcao escolhida:");
             opcDisc = scan.nextInt();
-            
-        }
-        System.out.print(clear);  
-        System.out.println("Deseja Matricular esse aluno em alguma disciplina?\n[0]-Sim\n[1]-Não\n\n");
-        esc1 = scan.nextInt();
-        if(esc1 == 0)
-        {
-            for(i = 0; i < cursos.size(); i++)
+            aluno.setCurso(cursos.get(opcDisc));
+            System.out.print(clear);  
+            System.out.println("Deseja Matricular esse aluno em alguma disciplina?\n[0]-Sim\n[1]-Não\n\n");
+            esc1 = scan.nextInt();
+            if(esc1 == 0)
             {
-                for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
+                for(i = 0; i < cursos.size(); i++)
                 {
-                    System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
-                }
-                
-            }
-            System.out.println("Opcao escolhida:");
-            opcDisc = scan.nextInt();
-            cursos.get(opcDisc/10).disciplinaDeId(opcDisc%10).setAlunos(aluno);
-            System.out.println("Matriculado com sucesso.");
-            
-            while(esc1==0)
-            {
-               System.out.println("Deseja Matricular esse aluno em alguma outra disciplina?\n[0]-Sim\n[1]-Não\n\n");
-               esc1 = scan.nextInt();
-               System.out.print(clear); 
-                if(esc1 == 0)
-                { 
-                
-                    for(i = 0; i < cursos.size(); i++)
+                    for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
                     {
-                        for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
-                        {
-                            System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
-                        }
-
+                        System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
                     }
-                    System.out.println("Opcao escolhida:");
-                    opcDisc = scan.nextInt();
-                    cursos.get(opcDisc/10).disciplinaDeId(opcDisc%10).setAlunos(aluno);
-                    System.out.println("Matriculado com sucesso."); 
+
                 }
-           }
+                System.out.println("Opcao escolhida:");
+                opcDisc = scan.nextInt();
+                cursos.get(opcDisc/10).disciplinaDeId(opcDisc%10).setAlunos(aluno);
+                System.out.println("Matriculado com sucesso.");
+
+                while(esc1==0)
+                {
+                System.out.println("Deseja Matricular esse aluno em alguma outra disciplina?\n[0]-Sim\n[1]-Não\n\n");
+                esc1 = scan.nextInt();
+                System.out.print(clear); 
+                    if(esc1 == 0)
+                    { 
+
+                        for(i = 0; i < cursos.size(); i++)
+                        {
+                            for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
+                            {
+                                System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
+                            }
+
+                        }
+                        System.out.println("Opcao escolhida:");
+                        opcDisc = scan.nextInt();
+                        cursos.get(opcDisc/10).disciplinaDeId(opcDisc%10).setAlunos(aluno);
+                        System.out.println("Matriculado com sucesso."); 
+                    }
+                }
+            }
        }
     }
     
