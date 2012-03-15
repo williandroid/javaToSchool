@@ -21,16 +21,12 @@ public class AdolEBiD {
     static public ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
     
     static Scanner scan = new Scanner(System.in);
-    static char esc = 27;  
-    static String clear = esc + "[2J"; //codigo ansi para limpar a tela  
     
     public static void main(String[] args) {
         int escolha;
-        escolha = scan.nextInt();
         boolean flag = true;
         while(flag)
         {
-            System.out.print(clear); 
             System.out.println("[1] - Cadastrar novo curso");
             System.out.println("[2] - Cadastrar nova disciplina");
             System.out.println("[3] - Cadastrar novo aluno");
@@ -38,29 +34,24 @@ public class AdolEBiD {
             System.out.println("[5] - Relatorio de Cursos");
             System.out.println("[6] - Relatorio de Disciplinas");
             System.out.println("[7] - Sair");
+            escolha = scan.nextInt();
             switch(escolha)
             {
-                case 1:
-                    System.out.print(clear);  
+                case 1: 
                     cadastrarCurso();
                     break;
                 case 2:
-                    System.out.print(clear);
                     cadastrarDisciplina();
-                case 3:
-                    System.out.print(clear);  
+                case 3: 
                     cadastrarAluno();
                     break;
-                case 4:
-                    System.out.print(clear);  
+                case 4: 
                     relatorioAlunos();
                     break;
                 case 5:
-                    System.out.print(clear);  
                     relatorioCursos();
                     break;
                 case 6:
-                    System.out.print(clear);  
                     relatorioDisciplinas();
                     break;
                 case 7:
@@ -78,7 +69,6 @@ public class AdolEBiD {
         Aluno aluno = new Aluno();
         alunos.add(aluno);
         System.out.println("Aluno Cadastrado com Sucesso.");
-        System.out.print(clear); 
         System.out.println("Deseja matricular esse aluno em algum curso?\n[0]-Sim\n[1]-Não\n\n");
         esc1 = scan.nextInt();
         if(esc1 == 0)
@@ -89,8 +79,7 @@ public class AdolEBiD {
             }
             System.out.println("Opcao escolhida:");
             opcDisc = scan.nextInt();
-            aluno.setCurso(cursos.get(opcDisc));
-            System.out.print(clear);  
+            aluno.setCurso(cursos.get(opcDisc));  
             System.out.println("Deseja Matricular esse aluno em alguma disciplina?\n[0]-Sim\n[1]-Não\n\n");
             esc1 = scan.nextInt();
             if(esc1 == 0)
@@ -112,7 +101,6 @@ public class AdolEBiD {
                 {
                 System.out.println("Deseja Matricular esse aluno em alguma outra disciplina?\n[0]-Sim\n[1]-Não\n\n");
                 esc1 = scan.nextInt();
-                System.out.print(clear); 
                     if(esc1 == 0)
                     { 
 
@@ -149,8 +137,7 @@ public class AdolEBiD {
             System.out.println("["+i+"] - Curso: "+ cursos.get(i).getNome());
         }
         System.out.println("Opcao escolhida:");
-        int opcDisc = scan.nextInt();
-        System.out.print(clear); 
+        int opcDisc = scan.nextInt(); 
         Disciplinas disciplina = new Disciplinas(cursos.get(opcDisc));
         disciplinas.add(disciplina);
     }
