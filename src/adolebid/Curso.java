@@ -81,7 +81,7 @@ public class Curso {
      */
     public void registrarDisciplina() {
         
-        Disciplinas disciplina = new Disciplinas();
+        Disciplinas disciplina = new Disciplinas(this);
         disciplinasArray.add(disciplina);
         
     }
