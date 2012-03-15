@@ -56,7 +56,7 @@ public class AdolEBiD {
         telefone = scan.nextLine();
         System.out.println("Entre com o endereco do aluno:");
         endereco = scan.nextLine();
-        Aluno a = new Aluno(idAluno, nomeCompleto, email, telefone, endereco);
+        Aluno aluno = new Aluno(idAluno, nomeCompleto, email, telefone, endereco);
         System.out.println("-------------------------------------------------");
         System.out.println("Voce deseja matricular esse aluno em qual disciplina?");
         for(i = 0; i < cursos.size(); i++)
@@ -75,5 +75,6 @@ public class AdolEBiD {
         num = scan.nextInt();
         Disciplinas disciplina = new Disciplinas();
         disciplina = cursos.get(num/10).getDisciplinas().get(num%10);
+        disciplina.setAlunos(aluno);
     }
 }

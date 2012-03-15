@@ -98,8 +98,8 @@ public class Disciplinas {
     /**
      * @param alunos the alunos to set
      */
-    public void setAlunos(ArrayList<Aluno> alunos) {
-        this.alunos = alunos;
+    public void setAlunos(Aluno alunos) {
+        this.alunos.add(alunos);
     }
 
     /**
