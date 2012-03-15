@@ -14,7 +14,7 @@ public class Curso {
     private int id;
     private String nome;
     private String descricao;
-    private ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
+    private ArrayList<Disciplinas> disciplinasArray = new ArrayList<Disciplinas>();
 
     public Curso(int id, String nome, String descricao)
     {
@@ -73,19 +73,33 @@ public class Curso {
      * @return the disciplinas
      */
     public ArrayList<Disciplinas> getDisciplinas() {
-        return disciplinas;
+        return disciplinasArray;
     }
 
     /**
      * @param disciplinas the disciplinas to set
      */
-    public void registrarDisciplina(Disciplinas disciplina) {
+    public void registrarDisciplina() {
         
-        this.disciplinas.add(disciplina);
+        Disciplinas disciplina = new Disciplinas();
+        disciplinasArray.add(disciplina);
+        
     }
     
     public Disciplinas disciplinaDeId(int id)
     {
-        return this.disciplinas.get(id);
+        return this.disciplinasArray.get(id);
+    }
+    
+    public void exibirDisciplinas()
+    {
+            int j;
+            
+            for(j = 0; j < getDisciplinas().size(); j++)
+            {
+                System.out.println("["+j+"] - "+ disciplinaDeId(j).getNome());
+            }
+           
+        
     }
 }

@@ -21,47 +21,20 @@ public class AdolEBiD {
 //Tássio    
     public static void main(String[] args) {
        
-        
-       
-       
-       int escolha;
-        
-        while(true)
-        {
-            System.out.println("Escolha uma das opcoes:");
-            System.out.println("[1] - Cadastrar");
-            System.out.println("[2] - Visualizar");
-            System.out.println("[3] - Sair");
-            escolha = scan.nextInt();
-            if(escolha == 3)
-                   break;
-        }
+
     }
     
     public void cadastrarAluno()
     {
         int i, j;
-        int num;
         Aluno aluno = new Aluno();
         System.out.println("-------------------------------------------------");
         System.out.println("Voce deseja matricular esse aluno em qual disciplina?");
         
         for(i = 0; i < cursos.size(); i++)
         {
-            Curso auxCurso = new Curso();
-            
-            auxCurso = cursos.get(i);
-            
-            for(j = 0; j < auxCurso.getDisciplinas().size(); j++)
-            {
-                System.out.println("["+i+j+"] - "+ auxCurso.disciplinaDeId(j).getNome());
-            }
-           
+            cursos.get(i).exibirDisciplinas();
         }
-               
-        num = scan.nextInt();
-        Disciplinas disciplina = new Disciplinas();
-        disciplina = cursos.get(num/10).getDisciplinas().get(num%10);
-        disciplina.setAlunos(aluno);
+
     }
 }

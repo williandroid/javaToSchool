@@ -167,10 +167,6 @@ public class Aluno {
     public void setTrabalhos(ArrayList<Tarefas> trabalhos) {
         this.trabalhos = trabalhos;
     }
-    
-    public void gerarHistorico()
-    {
-        
-    }
+
     
 }
