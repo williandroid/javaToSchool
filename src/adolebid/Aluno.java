@@ -17,6 +17,7 @@ public class Aluno {
     private String email;
     private String telefone;
     private String endereco;
+    private Curso curso;
     private ArrayList<Presencas> presencas = new ArrayList<Presencas>();
     private ArrayList<Disciplinas> disciplinas = new ArrayList<Disciplinas>();
     private ArrayList<Tarefas> exames = new ArrayList<Tarefas>();
@@ -27,7 +28,8 @@ public class Aluno {
     
     public Aluno()
     {
-
+        System.out.println("Entre com o id do aluno:");
+        id = scan.nextInt();
         System.out.println("Entre com o nome completo do aluno:");
         nomeCompleto = scan.nextLine();
         System.out.println("Entre com o email do aluno:");
@@ -163,6 +165,20 @@ public class Aluno {
      */
     public void setTrabalhos(ArrayList<Tarefas> trabalhos) {
         this.trabalhos = trabalhos;
+    }
+
+    /**
+     * @return the curso
+     */
+    public Curso getCurso() {
+        return curso;
+    }
+
+    /**
+     * @param curso the curso to set
+     */
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
 
     

@@ -31,6 +31,10 @@ public class AdolEBiD {
             System.out.println("[3] - Cadastrar novo aluno");
             switch(escolha)
             {
+                case 1:
+                    System.out.print(clear);  
+                    cadastrarCurso();
+                    break;
                 case 3:
                     System.out.print(clear);  
                     cadastrarAluno();
@@ -46,6 +50,19 @@ public class AdolEBiD {
         int opcDisc;
         Aluno aluno = new Aluno();
         System.out.println("Aluno Cadastrado com Sucesso.");
+        System.out.print(clear); 
+        System.out.println("Deseja matricular esse aluno em algum curso?\n[0]-Sim\n[1]-Não\n\n");
+        esc1 = scan.nextInt();
+        if(esc1 == 0)
+        {
+            for(i = 0; i < cursos.size(); i++)
+            {
+                System.out.println("["+i+"] - Curso: "+cursos.get(i).getNome());
+            }
+            System.out.println("Opcao escolhida:");
+            opcDisc = scan.nextInt();
+            
+        }
         System.out.print(clear);  
         System.out.println("Deseja Matricular esse aluno em alguma disciplina?\n[0]-Sim\n[1]-Não\n\n");
         esc1 = scan.nextInt();
@@ -55,7 +72,7 @@ public class AdolEBiD {
             {
                 for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
                 {
-                    System.out.println("["+i+j+"] - "+ cursos.get(i).disciplinaDeId(j).getNome());
+                    System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
                 }
                 
             }
@@ -76,7 +93,7 @@ public class AdolEBiD {
                     {
                         for(j = 0; j < cursos.get(i).getDisciplinas().size(); j++)
                         {
-                            System.out.println("["+i+j+"] - "+ cursos.get(i).disciplinaDeId(j).getNome());
+                            System.out.println("["+i+j+"] - Curso: "+cursos.get(i).getNome()+"\tDisciplina: "+ cursos.get(i).disciplinaDeId(j).getNome());
                         }
 
                     }
@@ -89,4 +106,9 @@ public class AdolEBiD {
        }
     }
     
+    public static void cadastrarCurso()
+    {
+        Curso curso = new Curso();
+        cursos.add(curso);
+    }
 }

@@ -5,6 +5,7 @@
 package adolebid;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -15,12 +16,16 @@ public class Curso {
     private String nome;
     private String descricao;
     private ArrayList<Disciplinas> disciplinasArray = new ArrayList<Disciplinas>();
-
-    public Curso(int id, String nome, String descricao)
+    Scanner scan = new Scanner(System.in);
+    
+    public Curso()
     {
-        this.id = id;
-        this.nome = nome;
-        this.descricao = descricao;
+        System.out.println("Entre com o id do curso:");
+        id = scan.nextInt();
+        System.out.println("Entre com o nome do curso:");
+        nome = scan.nextLine();
+        System.out.println("Entre com a descricao do curso:");
+        descricao = scan.nextLine();
     }
 
     
