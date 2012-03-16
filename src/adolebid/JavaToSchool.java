@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Tássio Auad
  */
-public class AdolEBiD {
+public class JavaToSchool {
 
     /**
      * @param args the command line arguments
